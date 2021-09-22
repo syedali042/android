@@ -1,0 +1,7 @@
+{
+  "name": "EasyStay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

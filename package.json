@@ -1,0 +1,79 @@
+{
+  "name": "easystay",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000/",
+  "homepage": "./",
+  "dependencies": {
+    "@capacitor-community/contacts": "^1.0.9",
+    "@capacitor/android": "^3.2.0",
+    "@capacitor/app": "^1.0.3",
+    "@capacitor/core": "^3.2.2",
+    "@codetrix-studio/capacitor-google-auth": "^3.0.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "animejs": "^3.2.1",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "cors": "^2.8.5",
+    "firebase": "^9.0.1",
+    "formik": "^2.2.9",
+    "he": "^1.2.0",
+    "html-to-image": "^1.7.0",
+    "html2canvas": "^1.3.2",
+    "interweave": "^12.8.0",
+    "jquery": "^3.6.0",
+    "lodash.throttle": "^4.1.1",
+    "node-html-to-image": "^3.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-elastic-carousel": "^0.11.5",
+    "react-google-login": "^5.2.2",
+    "react-h5-video": "^1.0.4",
+    "react-html5video": "^2.5.1",
+    "react-infinite-scroll-hook": "^4.0.1",
+    "react-owl-carousel": "^2.3.3",
+    "react-paginate": "^7.1.3",
+    "react-plyr": "^2.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "reactstrap": "^8.9.0",
+    "slick-carousel": "^1.8.1",
+    "trianglify": "^4.1.1",
+    "typescript": "^4.4.2",
+    "use-react-screenshot": "^1.0.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^3.2.2"
+  }
+}

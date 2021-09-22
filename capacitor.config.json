@@ -1,0 +1,15 @@
+
+{
+  "appId": "io.ionic.EasyStay",
+  "appName": "Easy Stay",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {},
+  "plugins": {
+    "GoogleAuth": {
+      "scopes": ["profile","email"],
+    "serverClientId": "687467511973-t8212qfcmf8td2cdeo0keheaau1utlic.apps.googleusercontent.com"
+    }
+  }
+}
