@@ -42,11 +42,11 @@ function Featured() {
                            <Slider {...settings}>
                                 <div className="img_slider" onClick={()=>toursListing('National')}>
                                     <img src={`${GURL.SERVER_APP_IMAGES}/places/tourism/nat-tours.jpg`} alt="uk" height="150px" width="100%" className="img_Slider" style={{borderRadius: 10}}/>
-                                    <div className="font-weight-light text-white p-2" style={{zIndex:'1', fontSize:'11px',fontWeight:'600', opacity:1}}>National</div>
+                                    <div className="font-weight-light text-white p-2" style={{zIndex:'1', fontSize:'11px',fontWeight:'600', opacity:1}}>National Tours</div>
                                 </div>
                                 <div className="img_slider" onClick={()=>toursListing('International')}>
                                     <img src={`${GURL.SERVER_APP_IMAGES}/places/tourism/inter-tours.jpg`} alt="china" height="150px" width="100%" style={{borderRadius: 10}}/>
-                                    <div className="font-weight-light text-white p-2" style={{zIndex:'1', fontSize:'11px',fontWeight:'600', opacity:1}}>International</div>
+                                    <div className="font-weight-light text-white p-2" style={{zIndex:'1', fontSize:'11px',fontWeight:'600', opacity:1}}>International Tours</div>
                                 </div>
                             </Slider>
                            </div>
