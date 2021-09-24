@@ -35,8 +35,6 @@ function Featured() {
                             </div>
                         </div>
                     </div>
-                    {/* <br /> */}
-                    {/* <HomeBackgroundThree /> */}
                     <div className="row mt-2 bg-secondary pt-3 pt-1">
                            <div className="col-12">
                            <Slider {...settings}>
