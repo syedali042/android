@@ -52,7 +52,7 @@ function FeatureTours(props) {
             {/* <center>
                 <span className="loading-content-spinner fas fa-spinner fa-3x fa-spin mt-3 mb-3"></span>
             </center> */}
-            <div className="row ml-0 mr-0 pt-1 pb-3" >
+            <div className="row bg-secondary ml-0 mr-0 pt-3 pb-3" >
                 <div className="col-12">
             <Slider style={{maxWidth:'100%', overflowX:'hidden', margin:0, pad:0}} {...settings}>
             {Tours?Tours.map((feature)=>{

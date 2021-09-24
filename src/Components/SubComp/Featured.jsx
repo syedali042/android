@@ -35,7 +35,7 @@ function Featured() {
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-2 bg-secondary pt-3 pt-1">
+                    <div className="row mt-2 bg-custom pt-3 pt-1">
                            <div className="col-12">
                            <Slider {...settings}>
                                 <div className="img_slider" onClick={()=>toursListing('National')}>

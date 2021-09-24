@@ -38,7 +38,7 @@ function Explore() {
                         </div>
                     </div>
                     {/* <HomeBackgroundFive /> */}
-                    <div className="row bg-secondary pt-3">
+                    <div className="row bg-custom pt-3">
                         <div className="col-4 p-0" onClick={()=>exploreAdventures('Rafting')}>
                             <div className="card">
                             <div className="card-body text-center">
@@ -64,7 +64,7 @@ function Explore() {
                             </div>
                         </div>
                     </div>
-                    <div className="row bg-secondary">
+                    <div className="row bg-custom">
 
                         <div className="col-4 p-0" onClick={()=>exploreAdventures('Hiking')}>
                             <div className="card">
@@ -92,7 +92,7 @@ function Explore() {
                         </div>
                     </div>
                     <div style={{display: 'block'}} id="hide_ad">
-                    <div className="row bg-secondary pb-3">
+                    <div className="row bg-custom pb-3">
                         <div className="col-4 p-0" onClick={()=>exploreAdventures('Jet-Skiing')}>
                             <div className="card">
                             <div className="card-body text-center">

@@ -57,7 +57,7 @@ function Check(props) {
                     </div>
                     
                     {/* <HomeBackgroundTwo /> */}
-                       <div className="row ml-0 mr-0 bg-secondary mt-2 pt-3 pb-2">
+                       <div className="row ml-0 mr-0 bg-custom mt-2 pt-3 pb-2">
                            <div className="col-12">
                            <Slider style={{maxWidth:'100%', overflowX:'hidden', margin:0, pad:0}} {...settings}>
                                 <div className="img_slider" onClick={()=> submitHotelByCity('Naran')}>

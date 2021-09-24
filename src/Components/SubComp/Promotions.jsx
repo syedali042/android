@@ -55,7 +55,7 @@ function Promotions(props) {
             <center>
                 {/* <span className="loading-content-spinner d-none fas fa-spinner fa-3x fa-spin mt-3 mb-3"></span> */}
             </center>
-            <div className="row ml-0 mr-0 pt-1" >
+            <div className="row ml-0 mr-0 pt-3 pb-3 bg-secondary" >
                 <div className="col-12">
             <Slider style={{maxWidth:'100%', overflowX:'hidden', margin:0, pad:0}} {...settings}>
             {Hotels?Hotels.map((feature)=>{
@@ -64,7 +64,7 @@ function Promotions(props) {
             return (
                 <>
             <div className="card" style={{border:'2px solid #e2e2e2'}}>
-                <img className="card-img-top" style={{height:'140px'}} src={`${GURL.SERVER_IMAGES}/hotelImages/${feature?feature.hotel.hotel_image:null}`} alt="plain1" />
+                <img className="card-img-top" style={{height:'170px'}} src={`${GURL.SERVER_IMAGES}/hotelImages/${feature?feature.hotel.hotel_image:null}`} alt="plain1" />
                 <div className="card-body" style={{padding:'0.5rem'}}>
                 <h6 className="text-dark" style={{fontSize:'12px'}}><FontAwesomeIcon icon={faBed} className="text-primary" /> {feature?feature.hotel.hotel_name:null}</h6>
                 <p className="text-default" style={{fontSize:'11px', marginTop:'-5px'}}><FontAwesomeIcon icon={faMapMarker} className="text-success" /> {feature?feature.hotel.hotel_address:null}</p>
