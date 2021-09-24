@@ -10,4 +10,7 @@
 /.vscode
 /.history
 /android
+/easystay.jks
+/private_key.pepk
+/ionic.capacitor.json
 
