@@ -24,7 +24,9 @@ function Home() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true
+        centerMode: true,
+        autoplay:true,
+        autolaySpeed:2000
     };
     const history = useHistory()
     const handleSearch = (type) => {    

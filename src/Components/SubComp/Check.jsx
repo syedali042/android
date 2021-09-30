@@ -18,10 +18,13 @@ function Check(props) {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 200,
+        speed: 700,
         slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true
+        slidesToScroll: 2,
+        centerMode: true,
+        autoplay:true,
+        autoplaySpeed:2000,
+        rtl:true,
     };
 
     const [Cities, setCities] = useState([]);

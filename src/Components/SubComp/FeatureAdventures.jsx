@@ -19,25 +19,24 @@ function FeatureAdventures(props) {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true
+        centerMode: true,
+        speed: 800,
+        autoplay:true,
+        autoplaySpeed:2000,
+        rtl:false,
     };
     const history = useHistory();
     const [Adventures, setAdventures] = useState([]);
-    // const [MinRoomPrice, setMinRoomPrice] = useState([]);
-    // const [HotelDetails, setHotelDetails] = useState([]);
     useEffect(async()=>{
         try{
                 const res = await axios.post(`${GURL.BASEURL}getFeaturedAdventures`, {data:'1'});   
-                console.log(res.data.data);
                 setAdventures(res.data.data);
-                // setAdventures(res.data.data);
                 document.getElementsByClassName('loading-content-spinner')[0].classList.toggle('d-none')
             
         }catch(err){
-            console.log(err);
+            
         }
     }, [])
 

@@ -16,10 +16,13 @@ function Promotions(props) {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true
+        centerMode: true,
+        speed: 800,
+        autoplay:true,
+        autoplaySpeed:2000,
+        rtl:false,
     };
     const history = useHistory();
     const [Hotels, setHotels] = useState([]);
@@ -55,7 +58,7 @@ function Promotions(props) {
             <center>
                 {/* <span className="loading-content-spinner d-none fas fa-spinner fa-3x fa-spin mt-3 mb-3"></span> */}
             </center>
-            <div className="row ml-0 mr-0 pt-3 pb-3 bg-secondary" >
+            <div className="row ml-0 mr-0 pt-3 pb-3 bg-secondary">
                 <div className="col-12">
             <Slider style={{maxWidth:'100%', overflowX:'hidden', margin:0, pad:0}} {...settings}>
             {Hotels?Hotels.map((feature)=>{
