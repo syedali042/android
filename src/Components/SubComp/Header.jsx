@@ -56,44 +56,10 @@ function Header(props) {
         Main.push(`../listings/${text}`);
 
     }
-    // const BackButton = () =>{
-    //     if(props.page=="Home"){
-    //         return(
-    //             <>
-                    
-    //             </>
-    //         )
-    //     }else{
-    //         return(
-    //             <>
-    //                 <div className="col-2">
-    //                     <div className="header_data">
-    //                         <FontAwesomeIcon icon={faArrowCircleLeft} id="arrowSize" onClick={fun}/>
-    //                     </div> 
-    //                 </div>
-    //                 <div className="col-8">
-    //                     <div className="input_control search-input">
-    //                         <span><FontAwesomeIcon icon={faSearch} className="" id="searchIcon"/></span>
-    //                         <input type="text" className="form-control" autoComplete="off" name="place" placeholder="Search City, Destination, Hotel ..." onKeyUp={showData}/>
-                            
-    //                         <span><FontAwesomeIcon icon={faFilter} className="" id="filter"/></span>
-    //                     </div>      
-    //                     <div className="d-flex align-items-center justify-content-center d-none display-logo"><img src={`${GURL.SERVER_APP_IMAGES}/logo.png`} width="30px"/> &nbsp;<span style={{fontSize:20}}>EasyStay</span></div>
-    //                 </div>
-    //                 <div className="col-2">
-    //                     <div className="menu_bar">
-    //                         {/* <FontAwesomeIcon icon={faBars} id="bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{cursor: 'pointer'}}/> */}
-    //                         <img id="bars" src={`${GURL.SERVER_APP_IMAGES}userImages/${UserInfo.app_user_image}`} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{cursor: 'pointer'}}/>
-    //                     </div>
-    //                 </div>
-    //             </>
-    //         )
-    //     }
-    // }
-
+    
     return (
         <>
-            <header className="mycontainer pt-2 pb-2">
+            <header className="mycontainer pt-3 pb-2">
                 <div className="container">
                     <div className="row mr-0">
                         
@@ -111,7 +77,7 @@ function Header(props) {
                             {/* <span><FontAwesomeIcon icon={faFilter} className="" id="filter"/></span> */}
 
                         </div>      
-                        <div className="d-flex align-items-center justify-content-center d-none display-logo"><img src={`${GURL.SERVER_APP_IMAGES}/logo.png`} width="30px"/> &nbsp;<span style={{fontSize:20}}>EasyStay</span></div>
+                        <div className="d-flex justify-content-center d-none display-logo" style={{float:'right'}}><img src={`${GURL.SERVER_APP_IMAGES}/logo.png`} width="30px"/></div>
                     </div>
                     </div>
                 </div>

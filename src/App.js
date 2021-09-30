@@ -36,7 +36,10 @@ import JoinUs from "./Components/SubComp/joinus";
 import ForgotPassword from "./Components/ForgotPassword";
 import EditProfile from "./Components/EditProfile";
 import CountdownApp from "./Components/SubComp/Counter";
-
+import {
+  Plugins,
+  Capacitor
+} from '@capacitor/core'
 
 
 function App() {
@@ -65,6 +68,21 @@ function App() {
       }
   }
 
+  useEffect(() => {
+    if (Capacitor.isNative) {
+       Plugins.App.addListener('backButton', e => {
+          // Use of location.pathname is also correct
+          if (window.location.pathname === '/') {
+                Plugins.App.exitApp();
+          } else if (window.location.pathname === "/Home") {
+            // Show A Confirm Box For User to exit app or not
+               Plugins.App.exitApp();
+         } else {
+             history.goBack()
+          }
+       })
+    }
+ }, [])
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 

@@ -68,7 +68,7 @@ function CheckAvailability() {
         <>
             <Header />
             <div className="loading-overlay">
-            <img className="profile_img infinity-loop" src={window?`${GURL.SERVER_IMAGES}logo-n.png`:null} style={{width:'65px'}} alt="profile_img"/>    
+                <img className="profile_img infinity-loop" src={window?`${GURL.SERVER_IMAGES}logo-n.png`:null} style={{width:'65px'}} alt="profile_img"/>    
             </div>
                 <br />
                 <form action="javascript://" className="create-booking-form" onSubmit={handleSubmit}>
@@ -77,7 +77,7 @@ function CheckAvailability() {
                         <div className="row pt-1">
                             <div className="col-md-12 pb-3 col-12 form-group">
                                 <label for="adult" className="pb-2"> Enter Place, City Or Hotel</label>
-                                <input type="text" required="" id="place1" autoComplete="off" name="place" class="form-control"  onKeyUp={showData}/>
+                                <input type="text" onBlur={()=>document.getElementById('show_search_data1').style.display = "none"} required="" id="place1" autoComplete="off" name="place" class="form-control"  onKeyUp={showData}/>
                             </div>
                         </div>
                         <div id="show_search_data1" className="position-absolute bg-white" style={{display: 'none', zIndex:'1', maxWidth:'100%', overflowX:'hidden', borderRadius:'5px', boxShadow:'5px 5px 10px #303030'}}>

@@ -14,6 +14,7 @@ import FeatureTours from './SubComp/featureTours';
 import FeatureAdventures from './SubComp/FeatureAdventures';
 import avatar from './../images/avatar.png';
 import HomeBackground from './SubComp/HomeBackground';
+ 
 function Home() {
 
 

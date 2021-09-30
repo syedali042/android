@@ -87,17 +87,18 @@ const Hotel = (props) => {
                                     <div className="row pt-3">
                                         <div className="col-12">
                                             <div className="grey_back">
-                                                <h5 className="bold pb-2"><span className="text-warning">Starting From </span> Rs.{hotelPrice}<span className="text-muted">/night</span></h5>
+                                                <h5 className="bold pb-2"><span className="text-warning" style={{fontSize:'16px'}}>Starting From </span> <float style={{float:'right'}}>Rs.{hotelPrice}<span className="text-muted">/night</span></float></h5>
+                                                {/* <FontAwesomeIcon icon={faStar} className="text-warning" />
                                                 <FontAwesomeIcon icon={faStar} className="text-warning" />
                                                 <FontAwesomeIcon icon={faStar} className="text-warning" />
                                                 <FontAwesomeIcon icon={faStar} className="text-warning" />
                                                 <FontAwesomeIcon icon={faStar} className="text-warning" />
-                                                <FontAwesomeIcon icon={faStar} className="text-warning" />
-                                                <span className="text-muted left"> {HotelInfo.hotel_id} reviews</span>
+                                                <span className="text-muted left"> {HotelInfo.hotel_id} reviews</span> */}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <a className="btn btn-info btn-sm w-100 pt-2 text-white" href={HotelInfo.hotel_location}><FontAwesomeIcon icon={faMapMarked} className="text-warning" /> View Location</a>
                             </section>
                         </div>
                     </div>
