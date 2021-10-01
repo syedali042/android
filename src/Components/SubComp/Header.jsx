@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react';
 import axios from 'axios';
 import GURL from '../../GURL'
+import avatar from '../../images/avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowCircleLeft,faFilter,faBars, faDove, faSearch} from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./Sidebar";
@@ -66,7 +67,7 @@ function Header(props) {
                         {/* <BackButton /> */}
                         <div className="col-2">
                         <div className="menu_bar">
-                            <img id="bars" src={`${GURL.SERVER_APP_IMAGES}userImages/${UserInfo.app_user_image}`} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{cursor: 'pointer'}}/>
+                            <img id="bars" src={UserInfo.app_user_image?`${GURL.SERVER_APP_IMAGES}userImages/${UserInfo.app_user_image}`:avatar} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{cursor: 'pointer'}}/>
                             {/* <FontAwesomeIcon icon={faBars} id="bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{cursor: 'pointer'}}/> */}
                         </div>
                     </div>
