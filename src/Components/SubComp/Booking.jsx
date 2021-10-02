@@ -109,7 +109,7 @@ function Booking(props) {
            <section className="booking">
                <form action="javascript://" className="create-booking-form" onSubmit={handleSubmit}>
                 <div className="container">     
-                    <h2>Create Room Booking</h2>
+                    <h2>Create Rom Booking</h2>
                     <div className="row pt-1">
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Adult</label>
