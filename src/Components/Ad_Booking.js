@@ -98,7 +98,7 @@ function Ad_Booking(props) {
            <section className="booking">
                <form action="javascript://" className="create-booking-form" onSubmit={handleSubmit}>
                 <div className="container">     
-                    <h2>&nbsp;&nbsp;Create Adventure Booking</h2>
+                    <h2>Create Adventure Booking</h2>
                     <div className="row pt-1">
                         {/* (Maximum 20 Persons) */}
                         <div className="col-md-12 pb-3 col-12 form-group">

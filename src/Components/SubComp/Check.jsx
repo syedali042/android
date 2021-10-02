@@ -16,15 +16,14 @@ function Check(props) {
     let history = useHistory();
 
     const settings = {
-        dots: false,
+        // dots: true,
         infinite: true,
-        speed: 700,
+        speed: 500,
         slidesToShow: 2,
+        swipeToSlide: true,
         slidesToScroll: 2,
         centerMode: true,
-        autoplay:true,
-        autoplaySpeed:2000,
-        rtl:true,
+        
     };
 
     const [Cities, setCities] = useState([]);

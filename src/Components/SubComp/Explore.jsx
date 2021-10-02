@@ -66,11 +66,19 @@ function Explore() {
                     </div>
                     <div className="row bg-custom">
 
-                        <div className="col-4 p-0" onClick={()=>exploreAdventures('Hiking')}>
+                        {/* <div className="col-4 p-0" onClick={()=>exploreAdventures('Hiking')}>
                             <div className="card">
                             <div className="card-body text-center">
                                 <img className="card-img mb-3" src={`${GURL.SERVER_APP_IMAGES}/places/adventures/hiking.png`} id="round"/>
                                 <p style={{fontSize:'12px'}} className="card-subtitle mb-2 font-weight-bold">Hiking</p>
+                            </div>
+                            </div>
+                        </div> */}
+                        <div className="col-4 p-0" onClick={()=>exploreAdventures('Jeep-Ralley')}>
+                            <div className="card">
+                            <div className="card-body text-center">
+                                <img className="card-img mb-3" src={`${GURL.SERVER_APP_IMAGES}/places/adventures/Jeep-Ralley.jpg`} id="round"/>
+                                <p style={{fontSize:'12px'}} className="card-subtitle mb-2 font-weight-bold">Jeep Ralley</p>
                             </div>
                             </div>
                         </div>
@@ -82,11 +90,19 @@ function Explore() {
                             </div>
                             </div>
                         </div>
-                        <div className="col-4 p-0" onClick={()=>exploreAdventures('Rappling')}>
+                        {/* <div className="col-4 p-0" onClick={()=>exploreAdventures('Rappling')}>
                         <div className="card">
                             <div className="card-body text-center">
                             <img className="card-img mb-3" src={`${GURL.SERVER_APP_IMAGES}/places/adventures/rappling.png`} id="round"/>
                                 <p style={{fontSize:'12px'}} className="card-subtitle mb-2 font-weight-bold">Rappling</p>
+                            </div>
+                            </div>
+                        </div> */}
+                        <div className="col-4 p-0" onClick={()=>exploreAdventures('Diving')}>
+                        <div className="card">
+                            <div className="card-body text-center">
+                            <img className="card-img mb-3" src={`${GURL.SERVER_APP_IMAGES}/places/adventures/Diving.jpg`} id="round"/>
+                                <p style={{fontSize:'12px'}} className="card-subtitle mb-2 font-weight-bold">Diving</p>
                             </div>
                             </div>
                         </div>

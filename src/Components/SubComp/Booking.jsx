@@ -18,6 +18,9 @@ function Booking(props) {
     const [bookingTotalAmount, setBookingTotalAmount] = useState([]);
     const [bookingRequestId, setBookingRequestId] = useState([]);
     const [UserInfo, SetUserInfo] = useState([]);
+    const [RemainingAmount, setRemainingAmount] = useState([]);
+    const [PayableAmount, setPayableAmount] = useState([]);
+
 
     useEffect( async ()=> {
 
@@ -49,7 +52,9 @@ function Booking(props) {
             setBookingChildren(resp.children);
             setBookingCheckIn(resp.check_in);
             setBookingCheckOut(resp.check_out);
+            setPayableAmount(30/100*resp.totalAmount);
             setBookingTotalAmount(resp.totalAmount);
+            setRemainingAmount(resp.totalAmount - 30/100*resp.totalAmount)
             setBookingRequestId(resp.request_id);
             document.getElementsByClassName('loading-overlay')[0].classList.toggle('is-active')
         }
@@ -81,10 +86,16 @@ function Booking(props) {
             deposit_amount: data.deposit_amount.value,
             transaction_id: data.transaction_id.value,
         }
-        const res = await axios.post(`${GURL.BASEURL}addPayment`, req);
-        if(res){
-            props.history.push('../notification');
+        if(req.deposit_amount==PayableAmount && req.transaction_id!==''){
+            const res = await axios.post(`${GURL.BASEURL}addPayment`, req);
+            if(res){
+                props.history.push('../notification');
+            }
+        }else{
+            alert(`System Will Accept Just (Rs.${PayableAmount}/-) 30% Of Your Total Charges. And Transaction Id (TID) must be valid.`);
+            document.getElementsByClassName('loading-overlay')[0].classList.toggle('is-active')
         }
+        
     }
 
 
@@ -98,7 +109,7 @@ function Booking(props) {
            <section className="booking">
                <form action="javascript://" className="create-booking-form" onSubmit={handleSubmit}>
                 <div className="container">     
-                    <h2>&nbsp;&nbsp;Create Room Booking</h2>
+                    <h2>Create Room Booking</h2>
                     <div className="row pt-1">
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Adult</label>
@@ -143,7 +154,8 @@ function Booking(props) {
                             <p className="mb-1 text-muted">Children<span style={{float:'right'}} id="children" className="children float-right text-dark">{bookingChildren}</span></p>
                             <p className="mb-1 text-muted">Room Price Per Day<span style={{float:'right'}} id="room_price" className="room_price float-right text-dark">Rs.{bookingRoomPrice}/-</span></p>
                             <hr />
-                            <h6 className="font-weight-bold mb-0">TO PAY <span style={{float:'right'}} className="float-right">Rs.<total>{bookingTotalAmount}</total>/-</span></h6>
+                            <h6 className="font-weight-bold mb-0">To Pay (30%) <span style={{float:'right'}} className="float-right">Rs.<total>{PayableAmount}</total>/-</span></h6>
+                            <p className="p-2 mb-0 mt-3 text-center bg-danger text-white">Remaining Amount Of <b>Rs.{RemainingAmount}</b> (70%) you'll pay to the hotel.</p>
                         </div>
                     </div>
                     <div className="address p-3 bg-white">
@@ -158,7 +170,7 @@ function Booking(props) {
                             </a>
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="meezanPayment">
                                 <center>
-                                Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> Meezan Bank </b> account no
+                                Transfer Rs.<total>{PayableAmount}</total>/- to following <b> Meezan Bank </b> account no
                                 <h6 className="p-2">Account #: <span>02730104294649</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
 
@@ -181,7 +193,7 @@ function Booking(props) {
                             </a>
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="albarkaPayment">
                                 <center>
-                                Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> Al-Barka </b> account no
+                                Transfer Rs.<total>{PayableAmount}</total>/- to following <b> Al-Barka </b> account no
                                 <h6 className="p-2">Account #: <span>0102295480017</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
@@ -203,7 +215,7 @@ function Booking(props) {
                             </a>
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="jazzPayment">
                                 <center>
-                                Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> JazzCash </b> account no
+                                Transfer Rs.<total>{PayableAmount}</total>/- to following <b> JazzCash </b> account no
                                 <h6 className="p-2">Account #: <span> 0345 4450507</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
@@ -225,7 +237,7 @@ function Booking(props) {
                             </a>
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="easypaisaPayment">
                                 <center>
-                                Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> EasyPaisa </b> account no
+                                Transfer Rs.<total>{PayableAmount}</total>/- to following <b> EasyPaisa </b> account no
                                 <h6 className="p-2">Account #: <span> 0321 4450507</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
@@ -247,7 +259,7 @@ function Booking(props) {
                             </a>
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="upaisaPayment">
                                 <center>
-                                Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> U-Paisa </b> account no
+                                Transfer Rs.<total>{PayableAmount}</total>/- to following <b> U-Paisa </b> account no
                                 <h6 className="p-2">Account #: <span> 0333 4450507</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />

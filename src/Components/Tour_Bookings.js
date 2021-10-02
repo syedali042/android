@@ -97,14 +97,14 @@ function Tour_Bookings(props) {
            <section className="booking">
                <form action="javascript://" className="create-booking-form" onSubmit={handleSubmit}>
                 <div className="container">     
-                    <h2>&nbsp;&nbsp;Create Tour Booking</h2>
+                    <h2>Create Tour Booking</h2>
                     <div className="row pt-1">
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Persons</label>
                             <input type="number" required="" id="adult" name="request_persons" class="form-control" min="0" max="60" />
                         </div>
                         <div className="col-md-12 pb-3 col-12 form-group">
-                            <label for="adult"> Couple</label>
+                            <label for="adult"> Couple (If Married)</label>
                             <input type="number" required="" id="children" name="request_couple" class="form-control" min="0" max="60" />
                         </div>
                     </div>
