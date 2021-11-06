@@ -1160,3 +1160,28 @@ ol,ul{
     display: inline-block;
     padding-top:15px;
 }
+
+.top-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-bar ul li {
+    padding: 20px;
+    list-style: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    
+    .mobile-menu{
+        display: block;
+    }
+    .top-bar{
+        display: none;
+    }
+
+}

@@ -36,6 +36,7 @@ import JoinUs from "./Components/SubComp/joinus";
 import ForgotPassword from "./Components/ForgotPassword";
 import EditProfile from "./Components/EditProfile";
 import CountdownApp from "./Components/SubComp/Counter";
+import Sidebar2 from "./Components/SubComp/Sidebar2";
 import {
   Plugins,
   Capacitor
@@ -152,6 +153,7 @@ function App() {
         <Route path="/adventureBookings" exact component={AdventureBookings}/>
         <Route path="/joinUs" exact component={JoinUs}/>
         <Route path="/Counter" exact component={CountdownApp}/>
+        <Route path="/SideBar2" exact component={Sidebar2}/>
       </Switch>
       : history.push('./login')}
       <Switch>
