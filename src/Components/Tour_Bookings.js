@@ -160,7 +160,7 @@ function Tour_Bookings(props) {
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="meezanPayment">
                                 <center>
                                 Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> Meezan Bank </b> account no
-                                <h6 className="p-2">Account #: <span>02730104294649</span></h6>
+                                <h6 className="p-2"><span>02730105825637</span></h6> titled <h6 className="p-2"><span>EASY STAY ENTERPRISES</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
 
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
@@ -187,7 +187,7 @@ function Tour_Bookings(props) {
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="albarkaPayment">
                                 <center>
                                 Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> Al-Barka </b> account no
-                                <h6 className="p-2">Account #: <span>0102295480017</span></h6>
+                                <h6 className="p-2"><span>0102295480017</span></h6> titled <h6 className="p-2"><span>WAQAR UL HASSAN</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
                                 <input type="hidden" name="payment_method" value="Al-Barka Bank Account" />
@@ -213,7 +213,7 @@ function Tour_Bookings(props) {
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="jazzPayment">
                                 <center>
                                 Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> JazzCash </b> account no
-                                <h6 className="p-2">Account #: <span> 0345 4450507</span></h6>
+                                <h6 className="p-2"><span> 0345 4450507</span></h6> titled <h6 className="p-2"><span>WAQAR UL HASSAN</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
                                 <input type="hidden" name="payment_method" value="JazzCash" />
@@ -239,7 +239,7 @@ function Tour_Bookings(props) {
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="easypaisaPayment">
                                 <center>
                                 Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> EasyPaisa </b> account no
-                                <h6 className="p-2">Account #: <span> 0321 4450507</span></h6>
+                                <h6 className="p-2"><span> 0321 4450507</span></h6> titled <h6 className="p-2"><span>WAQAR UL HASSAN</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
                                 <input type="hidden" name="payment_method" value="EasyPaisa" />
@@ -265,7 +265,7 @@ function Tour_Bookings(props) {
                             <form style={{display: 'none'}} onSubmit={handlePaymentForm} className="methodDetails mt-3" action="javascript://"  id="upaisaPayment">
                                 <center>
                                 Transfer Rs.<total>{bookingTotalAmount}</total>/- to following <b> U-Paisa </b> account no
-                                <h6 className="p-2">Account #: <span> 0333 4450507</span></h6>
+                                <h6 className="p-2"><span> 0333 4450507</span></h6> titled <h6 className="p-2"><span>WAQAR UL HASSAN</span></h6>
                                 and provide the <b>Transaction Id </b> in following field
                                 <input type="hidden" className="request_id" name="booking_request_id" value={bookingRequestId} />
                                 <input type="hidden" name="payment_method" value="U-Paisa" />
