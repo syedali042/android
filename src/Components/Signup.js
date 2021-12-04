@@ -44,28 +44,28 @@ function Signup() {
 
     return (
         <>  
+            <div className="m-3">
+                <img src={logo} alt="logo" style={{width:45, height:52}} className="logo"/>
+            </div>
             <section className="login">
                 <div className="container login-container">
-                    <div className="logo-c">
-                        <img src={logo} alt="logo" className="logo"/>&nbsp;<h1 className="pt-2"><span>Easy</span><span>Stay</span></h1>
-                    </div>
                     <div className="response input-control mt-3 d-none">
                         <input className="btn btn-danger w-100 text-white" style={{fontSize:12}} type="submit" value="User with same Email or Password already exist"/>
                     </div>
                     <div className="row mt-3">
                         <div className="col-12 text-center">
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} autoComplete="off">
                                 <div className="input-control">
-                                    <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="text" autoComplete="off" className="w-100" name="name" placeholder="Full Name"/>
+                                    <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="text" className="w-100" name="name" placeholder="Full Name"/>
                                 </div>
                                 <div className="input-control">
                                     <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="email" className="w-100" name="email" placeholder="E-mail"/>
                                 </div>
                                 <div className="input-control">
-                                    <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="text" autoComplete="off" className="w-100" name="phone" placeholder="Phone No."/>
+                                    <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="text" className="w-100" name="phone" placeholder="Phone No."/>
                                 </div>
                                 <div className="input-control">
-                                    <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="password" autoComplete="off" className="w-100" name="password" placeholder="Password"/>
+                                    <input required="required" onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} type="password" className="w-100" name="password" placeholder="Password"/>
                                 </div>
                                 <div className="input-control">
                                     <input onClick={disableBtn} onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} className="btn btn-info w-100 text-white" type="submit" value="Sign Up"/>

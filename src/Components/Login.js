@@ -52,12 +52,11 @@ function Login() {
             <div className="loading-overlay d-flex">
                 <span className="fas fa-spinner fa-3x fa-spin"></span>
             </div>
-            <br />
+            <div className="m-3">
+                <img src={logo} alt="logo" style={{width:45, height:52}} className="logo"/>
+            </div>
             <section className="login">
                 <div className="container login-container">
-                    <div className="logo-c">
-                        <img src={logo} alt="logo" className="logo"/>&nbsp;<h1 className="pt-2"><span>Easy</span><span>Stay</span></h1>
-                    </div>
                     <div className="row mt-3">
                     <div className="response text-center bg-warning p-2 d-none">
                         <label>* Check your email or password</label>

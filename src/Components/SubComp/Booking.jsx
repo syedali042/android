@@ -43,7 +43,8 @@ function Booking(props) {
             request_check_out_date: data.request_check_out_date.value,
         }
         const res = await axios.post(`${GURL.BASEURL}cd`, req);
-        if(res){
+        if(res.data.status==true){
+            console.log(res);
             document.getElementsByClassName('success-response')[0].style.display='block';
             document.getElementsByClassName('create-booking-form')[0].style.display='none';
             const resp = res.data;
@@ -57,6 +58,9 @@ function Booking(props) {
             setRemainingAmount(resp.totalAmount - 30/100*resp.totalAmount)
             setBookingRequestId(resp.request_id);
             document.getElementsByClassName('loading-overlay')[0].classList.toggle('is-active')
+        }else{
+            document.getElementsByClassName('loading-overlay')[0].classList.toggle('is-active')
+            alert('Room is not available for your dates. Please change your dates !');
         }
     }
 
