@@ -111,7 +111,7 @@ function JoinUs(props) {
             <Header />
             <br /><br />
             <div>
-            <div className="container position-relative" style={{overflowY:'scroll'}}>
+            <div className="container position-relative" style={{height:'700px', overflowY:'scroll'}}>
                 <div className="col-md-12 pb-3 col-12 form-group" >
                     <label for="adult"> Join as a</label>
                     <select className="form-control" name="join_as" onChange={handleChange}>
@@ -148,7 +148,7 @@ function JoinUs(props) {
                     </div>
                     <div className="row">
                         <div className="col-md-12 pb-3 col-12 form-group">
-                            <button onClick={()=>document.getElementById('cbSubmit').style.backgroundColor = '#03b6fc'} type="submit" id="cbSubmit" className="btn btn-success w-100 btn-sm"><i className="fa fa-arrow-right"></i> Submit</button>
+                            <button onClick={()=>document.getElementById('cbSubmit').style.backgroundColor = '#03b6fc'} type="submit" id="cbSubmit" className="btn btn-success w-100 mb-5 btn-sm"><i className="fa fa-arrow-right"></i> Submit</button>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@ function JoinUs(props) {
 
                     <div className="row pt-3">
                         <div className="col-md-12">
-                            <button onClick={()=>document.getElementById('cbSubmit').style.backgroundColor = '#03b6fc'} type="submit" id="cbSubmit" className="btn btn-success w-100 btn-sm"><i className="fa fa-arrow-right"></i> Submit</button>
+                            <button onClick={()=>document.getElementById('cbSubmit').style.backgroundColor = '#03b6fc'} type="submit" id="cbSubmit" className="btn btn-success w-100 mb-5 btn-sm"><i className="fa fa-arrow-right"></i> Submit</button>
                         </div>
                     </div>
 
@@ -296,13 +296,16 @@ function JoinUs(props) {
 
                     <div className="row pt-3">
                         <div className="col-md-12">
-                            <button onClick={()=>document.getElementById('cbSubmit').style.backgroundColor = '#03b6fc'} type="submit" id="cbSubmit" className="btn btn-success w-100 btn-sm"><i className="fa fa-arrow-right"></i> Submit</button>
+                            <button onClick={()=>document.getElementById('cbSubmit').style.backgroundColor = '#03b6fc'} type="submit" id="cbSubmit" className="btn btn-success w-100 mb-5 btn-sm"><i className="fa fa-arrow-right"></i> Submit</button>
                         </div>
                     </div>
                 </div>
             </form>
             </div>
+            <br /><br />
             </div>
+
+
             <HFooter />
         </>
     );

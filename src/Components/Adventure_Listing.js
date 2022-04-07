@@ -48,13 +48,13 @@ export default class Ad_Listing extends Component {
                             <div className="col-8 m-0 p-0">
                                 <div className="">
                                     <div className="card-body" style={{padding:'0.3rem'}}>
-                                    {/* <a href="#" class="card-link" style={{fontSize:'10px'}}>Featured</a> */}
-                                    {/* <a href="#" class="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
+                                    {/* <a href="#" className="card-link" style={{fontSize:'10px'}}>Featured</a> */}
+                                    {/* <a href="#" className="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
                                     <h5>Rs.{adv.adventure_charges}<span className="text-muted" style={{fontSize: '14px'}}>/person</span></h5>
                                     <p className="text-subtitle" style={{fontSize: '14px', fontWeight: '500'}}><FontAwesomeIcon icon={faHeading} className="text-warning" /> &nbsp;{adv.adventure_title}</p>
                                     <p style={{fontSize: '11px', marginTop:'-7%'}} className="text-muted"><FontAwesomeIcon icon={faMapMarkerAlt} className="text-warning" /> &nbsp;{adv.adventure_place_address+', '+adv.adventure_city}</p>
-                                    <a href="javascript://" onClick={()=>this.props.history.push('../adventure_booking/'+adv.adventure_id)} class="btn btn-primary btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Book Now</a>
-                                    <a href="javascript://" onClick={()=>this.props.history.push('../adventure_details/'+adv.adventure_id)} class="btn btn-info text-white btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Details</a>
+                                    <a href="javascript://" onClick={()=>this.props.history.push('../adventure_booking/'+adv.adventure_id)} className="btn btn-primary btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Book Now</a>
+                                    <a href="javascript://" onClick={()=>this.props.history.push('../adventure_details/'+adv.adventure_id)} className="btn btn-info text-white btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Details</a>
                                     </div>
                                 </div>
                             </div>                            

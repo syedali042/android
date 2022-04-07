@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import GURL from '../GURL'
 import HFooter from './SubComp/Hfooter';
 
-export default class PlacesListing extends Component {
+export default class JobsListing extends Component {
     constructor(props) {
 
         super(props);
@@ -26,19 +26,19 @@ export default class PlacesListing extends Component {
     receivedData() {
         const id = this.props.match.params.id;
         axios
-            .post(`${GURL.BASEURL}getPlacesByType`, {place: id, place_id:'0'})
+            .post(`${GURL.BASEURL}getJobs`, {status: 'active'})
             .then(res => {
-                const data = res.data.data.data;
+                const data = res.data.data;
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
-                const postData = slice.map(pd => <React.Fragment>
-                    <div className="col-12" key={pd.place_id}>
+                const postData = slice.map(jobs => <React.Fragment>
+                    <div className="col-12" key={jobs.job_id}>
                         <div className="card">
-                            <img className="card-img-top" src={`${GURL.SERVER_APP_IMAGES}/places/places-images/${pd.places_images[0]}`} alt="plain" />
+                            {/* <img className="card-img-top" src={`${GURL.SERVER_APP_IMAGES}/places/places-images/${jobs.places_images[0]}`} alt="plain" /> */}
                             <div className="card-body p-2" style={{padding:'0.3rem'}}>
                                 {/* <a href="#" className="card-link" style={{fontSize:'10px'}}>Featured</a> */}
                                 {/* <a href="#" className="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
-                                <h6 className="text-muted pt-2">{pd.place_type}</h6>
-                                <h5 className="text-subtitle" style={{fontSize: '18px', fontWeight: '600'}}>{pd.place_name}</h5>
+                                <h6 className="text-muted pt-2">{jobs.job_type}<span className='text-uppercase' style={{float:'right'}}>{jobs.city}</span></h6>
+                                <h5 className="text-subtitle" style={{fontSize: '18px', fontWeight: '600'}}>{jobs.job_title}</h5>
                                 {/* <h5>$240<span className="text-muted" style={{fontSize: '14px'}}>/night</span></h5> */}
                                 {/* <FontAwesomeIcon icon={faStar} style={{color: '#e67e22',paddingRight: '3px'}}/>
                                 <FontAwesomeIcon icon={faStar} style={{color: '#e67e22',paddingRight: '3px'}}/>
@@ -46,10 +46,9 @@ export default class PlacesListing extends Component {
                                 <FontAwesomeIcon icon={faStar} style={{color: '#e67e22',paddingRight: '3px'}}/>
                                 <FontAwesomeIcon icon={faStar} style={{color: '#e67e22',paddingRight: '3px'}}/> */}
                                 {/* <span style={{fontSize: '14px',paddingLeft: '3px'}}>14k reviews</span> */}
-                                <p style={{textAlign:'justify'}}>{pd.place_descriptions}</p>
+                                <p style={{textAlign:'justify'}}>{jobs.job_description}</p>
+                                <div className="text-muted"><span style={{float:'left'}}>{jobs.concerned_person_name}</span><span style={{float:'right'}}>{jobs.concerned_person_contact}</span></div>
                                 <div>
-                                <a href={pd.place_map} className="btn btn-primary btn-sm card-link text-white" style={{fontSize:'12px', width:'47%', float:'left'}}><FontAwesomeIcon icon={faMapMarker} style={{fontSize:'12px',paddingRight: '2px'}}/> Location</a>
-                                <a onClick={()=>this.props.history.push(`../listings/${pd.place_name}`)} className="btn btn-warning btn-sm card-link text-white" style={{fontSize:'12px', width:'47%', float:'right'}}><FontAwesomeIcon icon={faHotel} style={{fontSize:'12px',paddingRight: '2px'}}/> Hotel</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +82,7 @@ export default class PlacesListing extends Component {
     }
     render() {
         return (
-            <>
+            <div style={{height:'100vh', overflow:'scroll'}}>
             <Header />
             <div className="loading-overlay is-active">
             <img className="profile_img infinity-loop" src={window?`${GURL.SERVER_IMAGES}logo-n.png`:null} style={{width:'65px'}} alt="profile_img"/>    
@@ -102,7 +101,6 @@ export default class PlacesListing extends Component {
             </section> 
             <br />
             <div className="container">
-                
                 {this.state.postData}
                 <>
                 <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
@@ -121,8 +119,9 @@ export default class PlacesListing extends Component {
                 </div>
                 </>
             </div>
+            <br /><br />
             <HFooter /> 
-            </>
+            </div>
         )
     }
 }

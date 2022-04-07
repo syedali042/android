@@ -70,8 +70,8 @@ function Signup() {
                                 <div className="input-control">
                                     <input onClick={disableBtn} onFocus={()=>document.getElementsByClassName('go_signup')[0].classList.add('d-none')} onBlur={()=>document.getElementsByClassName('go_signup')[0].classList.remove('d-none')} className="btn btn-info w-100 text-white" type="submit" value="Sign Up"/>
                                 </div>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                             <div className="go_signup">

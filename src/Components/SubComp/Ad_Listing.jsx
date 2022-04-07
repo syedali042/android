@@ -46,12 +46,12 @@ export default class Ad_Listing extends Component {
                             <div className="col-8 m-0 p-0">
                                 <div className="">
                                     <div className="card-body" style={{padding:'0.3rem'}}>
-                                    {/* <a href="#" class="card-link" style={{fontSize:'10px'}}>Featured</a> */}
-                                    {/* <a href="#" class="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
+                                    {/* <a href="#" className="card-link" style={{fontSize:'10px'}}>Featured</a> */}
+                                    {/* <a href="#" className="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
                                     <h6 style={{marginBottom:'-3%'}}>Rs.{adv.adventure_charges}<span className="text-muted" style={{fontSize: '14px'}}>/person</span></h6>
                                     <p style={{fontSize: '12px', fontWeight: 'bold', marginBottom:'-0.5%'}} className="text-muted pt-2"><FontAwesomeIcon icon={faMapMarkerAlt} className="text-warning" /> &nbsp;{adv.adventure_city}</p>
                                     <p className="text-subtitle" style={{fontSize: '10px', fontWeight: '400'}}><FontAwesomeIcon icon={faMapMarkedAlt} className="text-warning" /> &nbsp;Mountain Retreat Room</p>
-                                    <a href="javascript://" onClick={this.bookAdventure(adv.adventure_id)} class="btn btn-primary btn-sm w-100 card-link" style={{fontSize:'10px', marginTop:'-5%'}}>Book Now</a>
+                                    <a href="javascript://" onClick={this.bookAdventure(adv.adventure_id)} className="btn btn-primary btn-sm w-100 card-link" style={{fontSize:'10px', marginTop:'-5%'}}>Book Now</a>
                                     </div>
                                 </div>
                             </div>                            

@@ -10,8 +10,8 @@ function Psd3caro() {
                 <div className="container">
                     <div className="row mt-3">
                         <div className="col-12">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                        <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                            <div className="carousel-inner">
                                 <div className="carousel-item active">
                                 <img src={plain} className="d-block w-100" alt="plain" height="300px"/>
                                 </div>

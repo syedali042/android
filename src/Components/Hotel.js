@@ -54,8 +54,8 @@ const Hotel = (props) => {
                                 <div className="">
                                     <div className="row mt-3">
                                         <div className="col-12">
-                                        {/* <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-inner">
+                                        {/* <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                                            <div className="carousel-inner">
                                                 {hotel.hotel_images ? hotel.hotel_images.map((img, index)=>{
                                                     if(index==0){
                                                         <div className="carousel-item active">
@@ -87,7 +87,6 @@ const Hotel = (props) => {
                                     <div className="row pt-3">
                                         <div className="col-12">
                                             <div className="grey_back">
-                                                <h5 className="bold pb-2"><span className="text-warning" style={{fontSize:'16px'}}>Starting From </span> <float style={{float:'right'}}>Rs.{hotelPrice}<span className="text-muted">/night</span></float></h5>
                                                 {/* <FontAwesomeIcon icon={faStar} className="text-warning" />
                                                 <FontAwesomeIcon icon={faStar} className="text-warning" />
                                                 <FontAwesomeIcon icon={faStar} className="text-warning" />
@@ -139,7 +138,7 @@ const Hotel = (props) => {
                                     <br />
                                     <ul className="row">
                                         {HotelFacilities.map((facility, index)=>(
-                                            <li class="pt-3" style={{listStyle:'none'}}><b>{index+1}</b>. &nbsp;&nbsp;&nbsp;{facility.facility_name}</li>
+                                            <li className="pt-3" style={{listStyle:'none'}}><b>{index+1}</b>. &nbsp;&nbsp;&nbsp;{facility.facility_name}</li>
                                         ))}
                                     </ul>
                                 </div>

@@ -103,24 +103,24 @@ function Ad_Booking(props) {
                         {/* (Maximum 20 Persons) */}
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Persons</label> 
-                            <input type="number" required="" id="adult" name="request_persons" class="form-control" min="0" max="20" />
+                            <input type="number" required="" id="adult" name="request_persons" className="form-control" min="0" max="20" />
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Male Members</label>
-                            <input type="number" required="" id="adult" name="request_male" class="form-control" min="0" max="60" />
+                            <input type="number" required="" id="adult" name="request_male" className="form-control" min="0" max="60" />
                             <small>Leave Zero (0) if no individual</small>
                         </div>
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="children">Female Members</label>
-                            <input type="number" required="" id="children" name="request_female" class="form-control" min="0" max="60" />
+                            <input type="number" required="" id="children" name="request_female" className="form-control" min="0" max="60" />
                             <small>Leave Zero (0) if no individual</small>
                         </div>
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="date">Choose Your Adventure Date</label>
-                            <input type="date" required="" id="date" name="request_adventure_date" class="form-control" />
+                            <input type="date" required="" id="date" name="request_adventure_date" className="form-control" />
                         </div>
                     </div>
                     <div className="row">

@@ -65,12 +65,12 @@ function FeatureTours(props) {
                 <div className="row">
                     <div className="col">
                         <div className="card" style={{border:'2px solid #e2e2e2'}}>
-                            <img className="card-img-top" height="150px" src={`${GURL.SERVER_IMAGES}/tourImages/${feature.t_img[0]}`} alt="plain" />
+                            <img className="card-img-top" height="150px" src={`${GURL.SERVER_IMAGES}/tourImages/${feature.t_img[0]}`?`${GURL.SERVER_IMAGES}/tourImages/${feature.t_img[0]}`:'N/A'} alt="plain" />
                             <div className="card-body" style={{padding:'0.3rem'}}>
-                            <h6 className="text-primary p-2">{feature.tour.tour_title}</h6>
+                            <h6 className="text-primary p-2">{feature.tour.tour_title?feature.tour.tour_title:'N/A'}</h6>
                             <div className="row" style={{fontSize:'15px'}}>
                                 <div className="col-5">
-                                    <span className="text-default" style={{float:'left', fontSize:'10px'}}><FontAwesomeIcon icon={faCalendarAlt} className="text-success" />&nbsp; {feature.tour.starting_from}</span>
+                                    <span className="text-default" style={{float:'left', fontSize:'10px'}}><FontAwesomeIcon icon={faCalendarAlt} className="text-success" />&nbsp; {feature.tour.starting_from?feature.tour.starting_from:'N/A'}</span>
                                 </div>
                                 <div className="col-2 text-warning">
                                     <center>
@@ -78,14 +78,14 @@ function FeatureTours(props) {
                                     </center>
                                 </div>
                                 <div className="col-5">
-                                    <span className="text-default" style={{float:'right', fontSize:'10px'}}><FontAwesomeIcon icon={faCalendarAlt} className="text-success" />&nbsp; {feature.tour.ending_at}</span>
+                                    <span className="text-default" style={{float:'right', fontSize:'10px'}}><FontAwesomeIcon icon={faCalendarAlt} className="text-success" />&nbsp; {feature.tour.ending_at?feature.tour.ending_at:'N/A'}</span>
                                 </div>
                             </div>
                             <div className="row" style={{fontSize:'15px'}}>
                                 <div className="col-5">
                                     <div className="text-default" style={{float:'left', fontSize:'10px'}}><FontAwesomeIcon icon={faUserFriends} className="text-success" /> Couple</div>
                                     <br />
-                                    <div className="text-default" style={{textAlign:'left', fontSize:'12px'}}> Rs.<span className="text-success" style={{fontSize:'16px'}}>{feature.tour.charges_per_couple}</span>/-</div>
+                                    <div className="text-default" style={{textAlign:'left', fontSize:'12px'}}> Rs.<span className="text-success" style={{fontSize:'16px'}}>{feature.tour.charges_per_couple?feature.tour.charges_per_couple:'N/A'}</span>/-</div>
                                 </div>
                                 <div className="col-2 text-warning">
                                     <center>
@@ -95,7 +95,7 @@ function FeatureTours(props) {
                                 <div className="col-5">
                                     <div className="text-default" style={{float:'left', fontSize:'10px'}}><FontAwesomeIcon icon={faUser} className="text-success" /> Person &nbsp;&nbsp;</div>
                                     <br />
-                                    <div className="text-default" style={{textAlign:'left', fontSize:'12px'}}> Rs.<span className="text-success" style={{fontSize:'16px'}}>{feature.tour.charges_per_person}</span>/-</div>
+                                    <div className="text-default" style={{textAlign:'left', fontSize:'12px'}}> Rs.<span className="text-success" style={{fontSize:'16px'}}>{feature.tour.charges_per_person?feature.tour.charges_per_person:'N/A'}</span>/-</div>
                                 </div>
                             </div>
                                 <a href="javascript://" onClick={() => history.push(`../tour_bookings/${feature.tour.tour_id}`)} className="btn btn-primary btn-sm mt-2 d-inline-block" style={{width:'47%',fontSize:'10px'}}>Book Now</a>

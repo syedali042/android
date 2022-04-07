@@ -41,7 +41,7 @@ function Sidebar(props) {
                 </div>
             </div>
         </div>
-        <div class="offcanvas-body">
+        <div className="offcanvas-body">
             <ul>
                 <li><NavLink to="/">Home</NavLink></li>
                 {/* <li><NavLink to="/listings">Hotel Listing</NavLink></li> */}
@@ -56,6 +56,7 @@ function Sidebar(props) {
                 {/* <li><NavLink to="/adventure_listing">Adventure Listing</NavLink></li> */}
                 {/* <li><NavLink to="/adventure_details">Adventure Details</NavLink></li> */}
                 <li><NavLink to="/adventureBookings">Adventure Bookings</NavLink></li>
+                <li><NavLink to="/jobs">Jobs</NavLink></li>
                 {/* <li><NavLink to="/adventure_booking_details">Adventure Bookings Details</NavLink></li> */}
                 {/* <li><NavLink to="/adventure_company_details">Adventure Company Details</NavLink></li> */}
                 <li><NavLink to="/explorePlaces">Explore</NavLink></li>

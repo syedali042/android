@@ -26,7 +26,7 @@ function Rooms(props) {
                                     <p style={{fontSize: '12px', fontWeight: '300', marginTop:'-5%'}} className="d-inline-block text-primary pt-2">Room # {room.room_no}</p>
                                     <p style={{fontSize: '12px', fontWeight: '300', float:'right'}} className="d-inline-block text-subtitle pt-1"><span className="rounded p-1" style={{backgroundColor:'rgb(0, 35, 63)', fontSize:'8px' , color:'#fff'}}>{room.room_type}</span></p>
                                 <h6>Rs.{room.room_price}<span className="text-muted" style={{fontSize: '14px'}}>/night</span></h6>
-                                <a href="javascript://" onClick={()=>createBooking(room.room_id)} class="card-link" style={{fontSize:'10px'}}>Book Now</a>
+                                <a href="javascript://" onClick={()=>createBooking(room.room_id)} className="card-link" style={{fontSize:'10px'}}>Book Now</a>
                                 </div>
                             </div>
                         </div>

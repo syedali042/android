@@ -72,15 +72,15 @@ function Login() {
                                 <div className="input-control">
                                     <input onClick={disableBtn} className="buttonloader btn btn-danger w-100" type="submit" value="Login"/>
                                 </div>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                             <div className="pt-2">
                                 <a href="./ForgotPassword" onClick={disableBtn} className="btn btn-primary w-100 text-white">Forget your password ?</a>
                             </div>
-                            <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                <span class="sr-only">Loading...</span>
+                            <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                <span className="sr-only">Loading...</span>
                             </div>
                             <div className="go_signup">
                                 <h6>Don't have an account ? <NavLink to="/signup">Signup</NavLink></h6>

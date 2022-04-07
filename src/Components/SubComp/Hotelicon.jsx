@@ -17,7 +17,7 @@ function Hotelicon() {
                         <div className="col-12 mt-3">
                         <div className="about_table">
                             <h2>Property Detail</h2>
-                            <table class="table table-striped">
+                            <table className="table table-striped">
                                 <thead>
                                     <tr>
                                     <th scope="col">Accomodation</th>

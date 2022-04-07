@@ -67,16 +67,16 @@ function Promotions(props) {
             return (
                 <>
             <div className="card" style={{border:'2px solid #e2e2e2'}}>
-                <img className="card-img-top" style={{height:'170px'}} src={`${GURL.SERVER_IMAGES}/hotelImages/${feature?feature.hotel.hotel_image:null}`} alt="plain1" />
+                <img className="card-img-top" style={{height:'170px'}} src={`${GURL.SERVER_IMAGES}/hotelImages/${feature?feature.hotel.hotel_image:null}`?`${GURL.SERVER_IMAGES}/hotelImages/${feature?feature.hotel.hotel_image:null}`:'N/A'} alt="plain1" />
                 <div className="card-body" style={{padding:'0.5rem'}}>
-                <h6 className="text-dark" style={{fontSize:'12px'}}><FontAwesomeIcon icon={faBed} className="text-primary" /> {feature?feature.hotel.hotel_name:null}</h6>
-                <p className="text-default" style={{fontSize:'11px', marginTop:'-5px'}}><FontAwesomeIcon icon={faMapMarker} className="text-success" /> {feature?feature.hotel.hotel_address:null}</p>
+                <h6 className="text-dark" style={{fontSize:'12px'}}><FontAwesomeIcon icon={faBed} className="text-primary" /> {feature?feature.hotel.hotel_name:null?feature?feature.hotel.hotel_name:null:'N/A'}</h6>
+                <p className="text-default" style={{fontSize:'11px', marginTop:'-5px'}}><FontAwesomeIcon icon={faMapMarker} className="text-success" /> {feature?feature.hotel.hotel_address:null?feature?feature.hotel.hotel_address:null:'N/A'}</p>
                 <div className="row" style={{fontSize:'15px', marginTop:'-15px', marginBottom:5}}>
                     <div className="col-6">
                         <div className="text-default" style={{float:'left', fontSize:'11px'}}><FontAwesomeIcon icon={faMoneyBillWaveAlt} className="text-warning" /> Starting From</div>
                     </div>              
                     <div className="col-6">
-                        <div className="text-default" style={{textAlign:'right', fontSize:'12px'}}> Rs.<span className="text-success" style={{fontSize:'12px'}}> {feature?feature.min_room_price.room_price:null}</span>/-</div>
+                        <div className="text-default" style={{textAlign:'right', fontSize:'12px'}}> Rs.<span className="text-success" style={{fontSize:'12px'}}> {feature?feature.min_room_price.room_price:null?feature?feature.min_room_price.room_price:null:'N/A'}</span>/-</div>
                     </div>      
                 </div>
                     <a href="javascript://" onClick={() => getFeatureHotel(feature.hotel.hotel_id)} className="btn btn-info text-white btn-sm w-100" style={{fontSize:'11px'}}>Details</a>

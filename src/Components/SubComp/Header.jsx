@@ -16,7 +16,6 @@ function Header(props) {
     }
     useEffect(async ()=>{
         let location = window.location.href;
-        console.log(location.match(/listings/g));
         if(location.match(/listings/g)=='listings'){
             document.getElementsByClassName('search-input')[0].classList.add('d-none');
             document.getElementsByClassName('display-logo')[0].classList.remove('d-none');
@@ -52,9 +51,9 @@ function Header(props) {
         SetUserInfo(user);
 
     }, [])
-    const handleSearch = (text) => {
+    const handleSearch = (text, place_lat, place_long) => {
         
-        Main.push(`../listings/${text}`);
+        Main.push(`../listings/${text}?place_lat=${place_lat}&place_long=${place_long}`);
 
     }
     
@@ -92,11 +91,11 @@ function Header(props) {
                             <p>{resultsHeading1}</p>
                             <hr />
                         </div>
-                        {results ? results.map(result=>{                        
+                        {results ? results.map(result=>{     
                             if(result.img){
                                 return(    
                                     <>
-                                    <div className="col-12 pt-1 megaSearchedItem" onClick={()=>handleSearch(result.value)}>
+                                    <div className="col-12 pt-1 megaSearchedItem" onClick={()=>handleSearch(result.value, result.place_lat, result.place_long)}>
                                         <div className="popup_window">
                                             <p style={{fontSize:'12px', paddingLeft:'10px', paddingRight:'10px',whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis'}}>
                                                 <img style={{width:'70px', height:'50px', borderRadius:'3px'}} src={`${GURL.SERVER_IMAGES}/hotelImages/${result.img}`}/>&nbsp;&nbsp;&nbsp;{result.value}
@@ -108,7 +107,7 @@ function Header(props) {
                                 )
                             }else{
                                 return <>
-                                    <div className="col-12 pt-1 megaSearchedItem" onClick={()=>handleSearch(result.value)}>
+                                    <div className="col-12 pt-1 megaSearchedItem" onClick={()=>handleSearch(result.value, result.place_lat, result.place_long)}>
                                         <div className="popup_window">
                                             <p style={{fontSize:'12px', whiteSpace:'nowrap',paddingLeft:'10px', paddingRight:'10px',overflow:'hidden', textOverflow:'ellipsis', fontWeight:'500'}}>{result.value}</p>
                                             <p style={{fontSize:'10px', paddingLeft:'10px', paddingRight:'10px'}}>{result.label}</p>

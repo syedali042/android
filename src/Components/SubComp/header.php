@@ -71,58 +71,58 @@ window.addEventListener("hashchange", function(e) {
 });
 </script>
 </head>
-<body class="fixed-bottom-padding bg-light">
+<body className="fixed-bottom-padding bg-light">
 
-<!-- <div class="theme-switch-wrapper">
-<label class="theme-switch" for="checkbox">
+<!-- <div className="theme-switch-wrapper">
+<label className="theme-switch" for="checkbox">
 <input type="checkbox" id="checkbox" />
-<div class="slider round"></div>
-<i class="icofont-moon"></i>
+<div className="slider round"></div>
+<i className="icofont-moon"></i>
 </label>
 <em>Enable Dark Mode!</em>
 </div> -->
 	
 <div id="preloader">
-	<div id="ctn-preloader" class="ctn-preloader">
-		<div class="animation-preloader">
-			<div class="logo p-3">
-				<img src="<?=APP_IMG?>logo.png" style="width:100px;" class="rotating-logo">
+	<div id="ctn-preloader" className="ctn-preloader">
+		<div className="animation-preloader">
+			<div className="logo p-3">
+				<img src="<?=APP_IMG?>logo.png" style="width:100px;" className="rotating-logo">
 			</div>
-			<!-- <div class="txt-loading">
-				<span data-text-preloader="E" class="letters-loading">
+			<!-- <div className="txt-loading">
+				<span data-text-preloader="E" className="letters-loading">
 					E
 				</span>
 				
-				<span data-text-preloader="A" class="letters-loading">
+				<span data-text-preloader="A" className="letters-loading">
 					A
 				</span>
 				
-				<span data-text-preloader="S" class="letters-loading">
+				<span data-text-preloader="S" className="letters-loading">
 					S
 				</span>
 				
-				<span data-text-preloader="Y" class="letters-loading">
+				<span data-text-preloader="Y" className="letters-loading">
 					Y
 				</span>
 				
-				<span data-text-preloader="S" class="letters-loading">
+				<span data-text-preloader="S" className="letters-loading">
 					S
 				</span>
 				
-				<span data-text-preloader="T" class="letters-loading">
+				<span data-text-preloader="T" className="letters-loading">
 					T
 				</span>
 				
-				<span data-text-preloader="A" class="letters-loading">
+				<span data-text-preloader="A" className="letters-loading">
 					A
 				</span>
 
-				<span data-text-preloader="Y" class="letters-loading">
+				<span data-text-preloader="Y" className="letters-loading">
 					Y
 				</span>
 			</div> -->
 		</div>	
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
+		<div className="loader-section section-left"></div>
+		<div className="loader-section section-right"></div>
 	</div>
 </div>

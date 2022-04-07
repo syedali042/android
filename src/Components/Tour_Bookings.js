@@ -101,23 +101,23 @@ function Tour_Bookings(props) {
                     <div className="row pt-1">
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Persons</label>
-                            <input type="number" required="" id="adult" name="request_persons" class="form-control" min="0" max="60" />
+                            <input type="number" required="" id="adult" name="request_persons" className="form-control" min="0" max="60" />
                         </div>
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Couple (If Married)</label>
-                            <input type="number" required="" id="children" name="request_couple" class="form-control" min="0" max="60" />
+                            <input type="number" required="" id="children" name="request_couple" className="form-control" min="0" max="60" />
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="adult"> Male Members</label>
-                            <input type="number" required="" id="adult" name="request_male" class="form-control" min="0" max="60" />
+                            <input type="number" required="" id="adult" name="request_male" className="form-control" min="0" max="60" />
                             <small>Leave Zero (0) if no individual</small>
                         </div>
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <label for="children">Female Members</label>
-                            <input type="number" required="" id="children" name="request_female" class="form-control" min="0" max="60" />
+                            <input type="number" required="" id="children" name="request_female" className="form-control" min="0" max="60" />
                             <small>Leave Zero (0) if no individual</small>
                         </div>
                     </div>
@@ -125,8 +125,8 @@ function Tour_Bookings(props) {
                         <div className="col-md-12 pb-3 col-12 form-group">
                             <button onClick={disableBtn}  id="cbSubmit" className="btn btn-success w-100 btn-sm"><i className="fa fa-arrow-right"></i> Confirm Booking & Continue to payment</button>
                         </div>
-                        <div class="spinner-border text-secondary d-none mt-3" role="status">
-                            <span class="sr-only">Loading...</span>
+                        <div className="spinner-border text-secondary d-none mt-3" role="status">
+                            <span className="sr-only">Loading...</span>
                         </div>
                     </div>
                     <div className="response mt-2 mb-3">
@@ -172,8 +172,8 @@ function Tour_Bookings(props) {
                                 <input type="submit" onClick={disableBtn} className="btn btn-dark btn-sm mt-2" value="Confirm Payment" />
 
                                 </center>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                         </div>
@@ -198,8 +198,8 @@ function Tour_Bookings(props) {
                                 <input type="submit" onClick={disableBtn} className="btn btn-dark btn-sm mt-2" value="Confirm Payment" />
 
                                 </center>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                         </div>
@@ -224,8 +224,8 @@ function Tour_Bookings(props) {
                                 <input type="submit" onClick={disableBtn} className="btn btn-dark btn-sm mt-2" value="Confirm Payment" />
 
                                 </center>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                         </div>
@@ -250,8 +250,8 @@ function Tour_Bookings(props) {
                                 <input type="submit" onClick={disableBtn} className="btn btn-dark btn-sm mt-2" value="Confirm Payment" />
 
                                 </center>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                         </div>
@@ -276,8 +276,8 @@ function Tour_Bookings(props) {
                                 <input type="submit" onClick={disableBtn} className="btn btn-dark btn-sm mt-2" value="Confirm Payment" />
 
                                 </center>
-                                <div class="spinner-border text-secondary d-none mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
+                                <div className="spinner-border text-secondary d-none mt-3" role="status">
+                                    <span className="sr-only">Loading...</span>
                                 </div>
                             </form>
                         </div>

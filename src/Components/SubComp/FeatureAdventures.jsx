@@ -62,22 +62,22 @@ function FeatureAdventures(props) {
                 <>
                     <div className="bg-white row m-0 p-0 d-flex align-items-center justify-content-center" style={{borderRadius:'5px'}}>
                         <div className="col-12 m-0 p-0">
-                            <img className="m-0 p-0 mb-2" src={`${GURL.SERVER_IMAGES}/adventureImages/${feature.t_img[0]}`} alt="plain" style={{borderRadius:'5px', height:'130px', width:'100%'}} />
+                            <img className="m-0 p-0 mb-2" src={`${GURL.SERVER_IMAGES}/adventureImages/${feature.t_img[0]}`?`${GURL.SERVER_IMAGES}/adventureImages/${feature.t_img[0]}`:'N/A'} alt="plain" style={{borderRadius:'5px', height:'130px', width:'100%'}} />
                         </div>
                         <div className="col-12 m-0 p-0">
                             <div className="">
                                 <div className="card-body" style={{padding:'0.3rem'}}>
-                                {/* <a href="#" class="card-link" style={{fontSize:'10px'}}>Featured</a> */}
-                                {/* <a href="#" class="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
-                                <h6 style={{marginBottom:'-3%'}}>Rs.{feature.adventure.adventure_charges}<span className="text-muted" style={{fontSize: '14px'}}>/person</span></h6>
-                                <p style={{fontSize: '12px', fontWeight: 'bold', marginBottom:'-0.5%'}} className="text-muted pt-2"><FontAwesomeIcon icon={faMapMarkerAlt} className="text-warning" /> &nbsp;{feature.adventure.adventure_city}</p>
-                                <p className="text-subtitle" style={{fontSize: '10px', fontWeight: '400'}}><FontAwesomeIcon icon={faMapMarkedAlt} className="text-warning" /> &nbsp;Mountain Retreat Room</p>
-                                <a href="javascript://" onClick={()=>history.push('../adventure_booking/'+feature.adventure.adventure_id)} class="btn btn-primary btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Book Now</a>
-                                <a href="javascript://" onClick={()=>history.push('../adventure_details/'+feature.adventure.adventure_id)} class="btn btn-info text-white btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Details</a>
+                                {/* <a href="#" className="card-link" style={{fontSize:'10px'}}>Featured</a> */}
+                                {/* <a href="#" className="card-link sweet" style={{fontSize:'10px',marginLeft:'0.3rem'}}>Top Rated</a> */}
+                                <h6 style={{marginBottom:'-3%'}}>Rs.{feature.adventure.adventure_charges?feature.adventure.adventure_charges:'N/A'}<span className="text-muted" style={{fontSize: '14px'}}>/person</span></h6>
+                                <p style={{fontSize: '12px', fontWeight: 'bold', marginBottom:'-0.5%'}} className="text-muted pt-2"><FontAwesomeIcon icon={faMapMarkerAlt} className="text-warning" /> &nbsp;{feature.adventure.adventure_city?feature.adventure.adventure_city:'N/A'}</p>
+                                <br />
+                                <a href="javascript://" onClick={()=>history.push('../adventure_booking/'+feature.adventure.adventure_id)} className="btn btn-primary btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Book Now</a>
+                                <a href="javascript://" onClick={()=>history.push('../adventure_details/'+feature.adventure.adventure_id)} className="btn btn-info text-white btn-sm card-link d-inline-block" style={{width:'45%' ,fontSize:'10px', marginTop:'-5%'}}>Details</a>
                                 </div>
                             </div>
                         </div>                            
-                        <Counter date={feature.ending_date}/>
+                        <Counter date={feature.ending_date?feature.ending_date:'N/A'}/>
                     </div>
                 </>
             )

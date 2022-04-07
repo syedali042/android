@@ -37,6 +37,7 @@ import ForgotPassword from "./Components/ForgotPassword";
 import EditProfile from "./Components/EditProfile";
 import CountdownApp from "./Components/SubComp/Counter";
 import Sidebar2 from "./Components/SubComp/Sidebar2";
+import JobsListing from "./Components/Jobs";
 import {
   Plugins,
   Capacitor
@@ -148,6 +149,7 @@ function App() {
         <Route path="/EditProfile" exact component={EditProfile}/>
         <Route path="/adventure_company_details" exact component={AdComDetails}/>
         <Route path="/account" exact component={Account}/>
+        <Route path="/jobs" exact component={JobsListing}/>
         <Route path="/hotelBookings" exact component={HotelBookings}/>
         <Route path="/tourBookings" exact component={TourBookings}/>
         <Route path="/adventureBookings" exact component={AdventureBookings}/>
