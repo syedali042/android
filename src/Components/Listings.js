@@ -133,6 +133,17 @@ export default class Listings extends Component {
     };
 
     componentDidMount() {
+        function titleCase(str) {
+            var splitStr = str.toLowerCase().split(' ');
+            for (var i = 0; i < splitStr.length; i++) {
+                // You do not need to check if i is larger than splitStr length, as your for does that for you
+                // Assign it back to the array
+                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+            }
+            // Directly return the joined string
+            return splitStr.join(' ');
+        }
+
         this.receivedData()
         const self = this;
         async function getWeather() {
@@ -141,7 +152,7 @@ export default class Listings extends Component {
             self.setState({ currentTemp: weathe.data.main.temp })
             self.setState({ windSpeed: weathe.data.wind.speed })
             self.setState({ humidity: weathe.data.main.humidity })
-            self.setState({ weatherDescription: weathe.data.weather[0].main })
+            self.setState({ weatherDescription: titleCase(weathe.data.weather[0].description) })
         }
         getWeather();
 
@@ -155,7 +166,7 @@ export default class Listings extends Component {
             var strTime = hours + ':' + minutes + ' ' + ampm;
             return strTime;
         }
-        self.setState({currentTime: formatAMPM(new Date)})
+        self.setState({ currentTime: formatAMPM(new Date) })
     }
     render() {
         return (
@@ -166,25 +177,27 @@ export default class Listings extends Component {
                 </div>
                 <Header />
                 <br />
-                <Heading matched={this.state.postData ? this.state.postData.length : 'Sorry for inconvenience, No'} where={this.props.match.params.id} type={'Hotels'} between={'Near'} />
                 <div className="loading-overlay">
                     <span className="fas fa-spinner fa-3x fa-spin"></span>
                 </div>
-                <div className="row justify-content-center">
-                    <div className="col-12 col-md-4 col-sm-12 col-xs-12">
-                        <div className="card p-4">
-                            <div className="d-flex">
-                                <h6 className="flex-grow-1">{this.props.match.params.id}</h6>
-                                <h6>{this.state.currentTime?this.state.currentTime:''}</h6>
-                            </div>
-                            <div className="d-flex flex-column temp mt-5 mb-3">
-                                <h1 className="mb-0 font-weight-bold" id="heading"> {(this.state.currentTemp - 273).toFixed(2)}° C </h1> <span className="small grey">{this.state.weatherDescription ? this.state.weatherDescription : ''}</span>
-                            </div>
-                            <div className="d-flex">
-                                <div className="d-flex align-items-center justify-content-between temp-details flex-grow-1">
-                                    <p className="my-1"> <img src="https://i.imgur.com/B9kqOzp.png" height="17px" /> <span> {this.state.windSpeed ? this.state.windSpeed : ''} km/h </span> </p>
-                                    <p className="my-1"> <i className="fa fa-tint mr-2" aria-hidden="true" style={{ color: '#737480' }}></i> <span> {this.state.humidity ? this.state.humidity : ''}% </span> </p>
+                <div className='container'>
+                    <Heading matched={this.state.postData ? this.state.postData.length : 'Sorry for inconvenience, No'} where={this.props.match.params.id} type={'Hotels'} between={'Near'} />
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-4 col-sm-12 col-xs-12">
+                            <div className="card p-3">
+                                <div className="d-flex">
+                                    <h6 className="flex-grow-1">{this.props.match.params.id}</h6>
+                                    <h6>{this.state.currentTime ? this.state.currentTime : ''}</h6>
+                                </div>
+                                <div className="d-flex flex-column temp mt-3 mb-3">
+                                    <h1 className="mb-0 font-weight-bold" id="heading"> {(this.state.currentTemp - 273).toFixed(2)}° C </h1> <span className="small grey">{this.state.weatherDescription ? this.state.weatherDescription : ''}</span>
+                                </div>
+                                <div className="d-flex">
+                                    <div className="d-flex align-items-center justify-content-between temp-details flex-grow-1">
+                                        <p className="my-1"> <img src="https://i.imgur.com/B9kqOzp.png" height="17px" /> <span> {this.state.windSpeed ? this.state.windSpeed : ''} km/h </span> </p>
+                                        <p className="my-1"> <i className="fa fa-tint mr-2" aria-hidden="true" style={{ color: '#737480' }}></i> <span> {this.state.humidity ? this.state.humidity : ''}% </span> </p>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>

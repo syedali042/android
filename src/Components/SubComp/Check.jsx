@@ -35,8 +35,8 @@ function Check(props) {
         })()
     },[]);
 
-    var submitHotelByCity = (text) => {
-        history.push(`./listings/${text}`);
+    var submitHotelByCity = (text, place_lat, place_long) => {
+        history.push(`./listings/${text}?place_lat=${place_lat}&place_long=${place_long}`);
     }
     
 
@@ -62,43 +62,43 @@ function Check(props) {
                        <div className="row ml-0 mr-0 bg-custom mt-2 pt-3 pb-2">
                            <div className="col-12">
                            <Slider style={{maxWidth:'100%', overflowX:'hidden', margin:0, pad:0}} {...settings}>
-                                <div className="img_slider" onClick={()=> submitHotelByCity('Naran')}>
+                                <div className="img_slider" onClick={()=> submitHotelByCity('Naran', '34.9093', '73.6507')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/Naran.jpg`} alt="Lahore" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Naran</div>
                                 </div>
-                                <div className="img_slider" onClick={()=> submitHotelByCity('Swat')}>
+                                <div className="img_slider" onClick={()=> submitHotelByCity('Swat','35.2227','72.4258')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/swat.jpeg`} alt="Lahore" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Swat</div>
                                 </div>
-                                <div className="img_slider" onClick={()=> submitHotelByCity('Lahore')}>
+                                <div className="img_slider" onClick={()=> submitHotelByCity('Lahore', '31.5204', '74.3587')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/lahore.jpg`} alt="Lahore" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Lahore</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Islamabad')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Islamabad', '33.6844', '73.0479')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/islamabad.jpg`} alt="islamabad" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Islamabad</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Karachi')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Karachi', '24.8607', '67.0011')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/karachi.jpg`} alt="Karachi" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Karachi</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Peshawar')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Peshawar', '34.0151', '71.5249')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/peshawar.jpg`} alt="Peshawar" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Peshawar</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Gilgit')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Gilgit', '35.8819', '74.4643')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/gilgit.jpg`} alt="Gilgit" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Gilgit</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Skardu')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Skardu', '35.3247', '75.5510')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/skardu.jpg`} alt="Skardu" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Skardu</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Faisalabad')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Faisalabad', '31.4504', '73.1350')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/Faisalabad.jpg`} alt="Faisalabad" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Faisalabad</div>
                                 </div>
-                                <div className="img_slider" onClick={()=>submitHotelByCity('Multan')}>
+                                <div className="img_slider" onClick={()=>submitHotelByCity('Multan', '30.1575', '71.5249')}>
                                     <div style={{opacity:'0.9'}}><img src={`${GURL.SERVER_APP_IMAGES}/places/multan.jpg`} alt="Multan" height="90px" width="100%" style={{borderRadius: 10}}/></div>
                                     <div style={{color:'#fff',fontSize:'12px',marginTop:'5px', textAlign:'center',fontWeight:'500',opacity:'1 !important'}}>Multan</div>
                                 </div>

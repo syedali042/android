@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAlt,faMailBulk} from '@fortawesome/free-solid-svg-icons';
-import { faHome,faSearch,faHeart, faCompass} from '@fortawesome/free-solid-svg-icons';
+import { faHome,faSearch,faHeart, faCompass, faBriefcase} from '@fortawesome/free-solid-svg-icons';
 import GURL from '../../GURL';
 
 function HFooter() {
@@ -20,7 +20,7 @@ function HFooter() {
                         </span>
                     </li>
                     <li className="col-2"><a href="../notification"><FontAwesomeIcon icon={faMailBulk} className="ul_color"/></a></li>
-                    <li className="col-2"><a href="../account"><FontAwesomeIcon icon={faUserAlt} className="ul_color"/></a></li>
+                    <li className="col-2"><a href="../jobs"><FontAwesomeIcon icon={faBriefcase} className="ul_color"/></a></li>
                 </ul>
             </footer>
             </div>
