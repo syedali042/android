@@ -9,7 +9,7 @@
     "@capacitor/android": "^3.2.0",
     "@capacitor/app": "^1.0.3",
     "@capacitor/core": "^3.2.2",
-    "@codetrix-studio/capacitor-google-auth": "^3.0.2",
+    "@codetrix-studio/capacitor-google-auth": "^3.1.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",

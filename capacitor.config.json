@@ -1,4 +1,3 @@
-
 {
   "appId": "io.ionic.EasyStay",
   "appName": "Easy Stay",
@@ -8,8 +7,8 @@
   "cordova": {},
   "plugins": {
     "GoogleAuth": {
-      "scopes": ["profile","email"],
-    "serverClientId": "687467511973-t8212qfcmf8td2cdeo0keheaau1utlic.apps.googleusercontent.com"
+      "scopes": ["profile", "email"],
+      "serverClientId": "70632556672-2uomkhq7va09bbvb5avgvi1p0pd9ripv.apps.googleusercontent.com"
     }
   }
 }
